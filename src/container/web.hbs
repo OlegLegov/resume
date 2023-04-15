@@ -1,0 +1,95 @@
+<div>
+  <header>
+    <h1>Web</h1>
+  </header>
+</div>
+<main>
+  {{#with web}}
+    <h2>Languages:</h2>
+    {{#each languages}}
+      <ul>
+        <li>
+          <dl>
+            <dt><h3>{{name}},</h3>
+              version -
+              {{version}}</dt>
+            <dd>{{description}}</dd>
+            {{#if elements includeZero=true}}
+              <h4>elements:</h4>
+            {{/if}}
+            {{#if properties includeZero=true}}
+              <h4>properties:</h4>
+            {{/if}}
+            {{#if functions includeZero=true}}
+              <h4>functions:</h4>
+            {{/if}}
+            {{#each elements}}
+              <ul>
+                <li>
+                  <dl>
+                    <dt>{{name}}</dt>
+                    <dd>{{description}}</dd>
+                    <b><i>attributes:</i></b>
+                    {{#each attributes}}
+                      <ul>
+                        <li>
+                          <dl>
+                            <dt>{{name}}</dt>
+                            <dd>{{description}}</dd>
+                          </dl>
+                        </li>
+                      </ul>
+                    {{/each}}
+                  </dl>
+                </li>
+              </ul>
+            {{/each}}
+            {{#each properties}}
+              <ul>
+                <li>
+                  <dl>
+                    <dt>{{name}}</dt>
+                    <dd>{{description}}</dd>
+                    <b><i>values:</i></b>
+                    {{#each values}}
+                      <ul>
+                        <li>
+                          <dl>
+                            <dt>{{value}}</dt>
+                            <dd>{{description}}</dd>
+                          </dl>
+                        </li>
+                      </ul>
+                    {{/each}}
+                  </dl>
+                </li>
+              </ul>
+            {{/each}}
+            {{#each functions}}
+              <ul>
+                <li>
+                  <dl>
+                    <dt>{{name}}</dt>
+                    <dd>{{description}}</dd>
+                    <b><i>parameters:</i></b>
+                    {{#each parameters}}
+                      <ul>
+                        <li>
+                          <dl>
+                            <dt>{{name}}, type -
+                              {{type}}</dt>
+                            <dd>{{description}}</dd>
+                          </dl>
+                        </li>
+                      </ul>
+                    {{/each}}
+                  </dl>
+                </li>
+              </ul>
+            {{/each}}
+          </dl>
+        </li>
+      </ul>
+    {{/each}}
+  {{/with}}
+</main>
