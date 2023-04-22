@@ -1,0 +1,147 @@
+<div>
+  <header>
+    <h1>{{name}}</h1>
+  </header>
+</div>
+<main>
+  <div>
+    <p><h3>{{description}}</h3></p>
+  </div>
+  <div>
+    <h3>History:</h3>
+    {{#with history}}
+      <ul>
+        <li>year - {{year}}</li>
+        <li>founder - {{founder}}</li>
+      </ul>
+    {{/with}}
+  </div>
+  <section>
+    <h3>Types:</h3>
+    <div class='list-group'>
+      {{#each types}}
+        <button
+          type='button'
+          class='list-group-item list-group-item-action'
+        >{{this}}</button>
+      {{/each}}
+    </div>
+  </section>
+  <section>
+    <h3>Syntax:</h3>
+    {{#with syntax}}
+      <ul>
+        <li>
+          <h4>variables:</h4>
+          <div
+            class='btn-group'
+            role='group'
+            aria-label='Basic example'
+          >
+            {{#each variables}}
+              <button
+                type='button'
+                class='btn btn-primary'
+              >{{this}}</button>
+            {{/each}}
+          </div>
+        </li>
+        <li>
+          <h4>functions:</h4>
+          <button
+            type='button'
+            class='btn btn-primary'
+          >{{functions}}</button>
+        </li>
+        <li>
+          <h4>conditionals:</h4>
+          <div
+            class='btn-group'
+            role='group'
+            aria-label='Basic example'
+          >
+            {{#each conditionals}}
+              <button
+                type='button'
+                class='btn btn-primary'
+              >{{this}}</button>
+            {{/each}}
+          </div>
+        </li>
+        <li>
+          <h4>loops:</h4>
+          <div
+            class='btn-group'
+            role='group'
+            aria-label='Basic example'
+          >
+            {{#each loops}}
+              <button
+                type='button'
+                class='btn btn-primary'
+              >{{this}}</button>
+            {{/each}}
+          </div>
+        </li>
+        <li>
+          <h4>classes:</h4>
+          <button
+            type='button'
+            class='btn btn-primary'
+          >{{classes}}</button>
+        </li>
+      </ul>
+    {{/with}}
+  </section>
+  <section>
+    <h3>Features:</h3>
+    <div class='list-group'>
+      {{#each features}}
+        <button
+          type='button'
+          class='list-group-item list-group-item-action'
+        >{{this}}</button>
+      {{/each}}
+    </div>
+  </section>
+  <section>
+    <h3>Libraries:</h3>
+    <div class='list-group'>
+      {{#each libraries}}
+        <button
+          type='button'
+          class='list-group-item list-group-item-action'
+        >{{this}}</button>
+      {{/each}}
+    </div>
+  </section>
+  <section>
+    <h3>Tools:</h3>
+    <div class='list-group'>
+      {{#each tools}}
+        <button
+          type='button'
+          class='list-group-item list-group-item-action'
+        >{{this}}</button>
+      {{/each}}
+    </div>
+  </section>
+  <section>
+    <h3>Community:</h3>
+    {{#each community}}
+      <div class='btn-group' role='group'>
+        <button
+          type='button'
+          class='btn btn-primary dropdown-toggle'
+          data-bs-toggle='dropdown'
+          aria-expanded='false'
+        >
+          {{name}}
+        </button>
+        <ul class='dropdown-menu'>
+          <li><a class='dropdown-item'>{{type}}</a></li>
+        </ul>
+      </div>
+    {{/each}}
+  </section>
+</main>
