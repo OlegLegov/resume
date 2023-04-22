@@ -1,0 +1,247 @@
+<main>
+  <section>
+    <div class='list-group'>
+      <button
+        type='button'
+        class='list-group-item list-group-item-action active'
+        aria-current='true'
+      ><h3>{{name}}</h3></button>
+      <button
+        type='button'
+        class='list-group-item list-group-item-action'
+      >{{description}}</button>
+      <button
+        type='button'
+        class='list-group-item list-group-item-action'
+      >price - {{price}}</button>
+      <button
+        type='button'
+        class='list-group-item list-group-item-action'
+      >category -
+        {{category}}</button>
+      <br />
+      <button
+        type='button'
+        class='list-group-item list-group-item-action active'
+        aria-current='true'
+      ><h4>Features</h4></button>
+      <br />
+      {{#with features}}
+        <button
+          type='button'
+          class='list-group-item list-group-item-action active'
+          aria-current='true'
+        ><h5>processor</h5></button>
+        {{#with processor}}
+          <div class='list-group'>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{brand}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{model}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{speed}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >cores -
+              {{cores}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >cache -
+              {{cache}}</button>
+          </div>
+        {{/with}}
+        <button
+          type='button'
+          class='list-group-item list-group-item-action active'
+          aria-current='true'
+        ><h5>memory</h5></button>
+        {{#with memory}}
+          <div class='list-group'>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{type}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{size}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{speed}}</button>
+          </div>
+        {{/with}}
+        <button
+          type='button'
+          class='list-group-item list-group-item-action active'
+          aria-current='true'
+        ><h5>storage</h5></button>
+        {{#with storage}}
+          <div class='list-group'>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{type}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{size}}</button>
+          </div>
+        {{/with}}
+        <button
+          type='button'
+          class='list-group-item list-group-item-action active'
+          aria-current='true'
+        ><h5>display</h5></button>
+        {{#with display}}
+          <div class='list-group'>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{size}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{resolution}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{technology}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >color space -
+              {{color_space}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{brightness}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{refresh_rate}}</button>
+          </div>
+        {{/with}}
+        <button
+          type='button'
+          class='list-group-item list-group-item-action active'
+          aria-current='true'
+        ><h5>graphics</h5></button>
+        {{#with graphics}}
+          <div class='list-group'>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{brand}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{model}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{memory}}</button>
+          </div>
+        {{/with}}
+        <button
+          type='button'
+          class='list-group-item list-group-item-action active'
+          aria-current='true'
+        ><h5>ports</h5></button>
+        {{#each ports}}
+          <div class='d-grid gap-2'>
+            <button
+              type='button'
+              class='btn btn-outline-primary'
+            >{{type}}</button>
+            <button
+              class='btn btn-outline-primary'
+              type='button'
+            >count - {{count}}</button>
+            {{#if features includeZero=true}}
+              <button
+                type='button'
+                class='btn btn-info'
+              >features</button>
+            {{/if}}
+            {{#each features}}
+              <button
+                type='button'
+                class='list-group-item list-group-item-action'
+              >{{this}}</button>
+            {{/each}}
+          </div>
+        {{/each}}
+        <button
+          type='button'
+          class='list-group-item list-group-item-action active'
+          aria-current='true'
+        ><h5>battery</h5></button>
+        {{#with battery}}
+          <div class='list-group'>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{type}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{capacity}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{life}}</button>
+          </div>
+        {{/with}}
+        <button type='button' class='btn btn-light'><h5
+          >weight -
+            {{weight}}</h5></button>
+        <button
+          type='button'
+          class='list-group-item list-group-item-action active'
+          aria-current='true'
+        ><h5>dimensions</h5></button>
+        {{#with dimensions}}
+          <div class='list-group'>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >height - {{height}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >width - {{width}}</button>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >depth - {{depth}}</button>
+          </div>
+        {{/with}}
+        <button type='button' class='btn btn-light'><h5
+          >operating system -
+            {{operating_system}}</h5></button>
+        <button
+          type='button'
+          class='list-group-item list-group-item-action active'
+          aria-current='true'
+        ><h5>accessories</h5></button>
+        {{#each accessories}}
+          <div class='list-group'>
+            <button
+              type='button'
+              class='list-group-item list-group-item-action'
+            >{{name}} - {{price}}</button>
+          </div>
+        {{/each}}
+      {{/with}}
+    </div>
+  </section>
+</main>
