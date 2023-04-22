@@ -1,0 +1,210 @@
+<main>
+  <div class='list-group'>
+    <button
+      type='button'
+      class='btn btn-info'
+      aria-current='true'
+    >
+      <h2>{{name}}</h2>
+    </button>
+    <br />
+    <ul class='list-group'>
+      <li class='list-group-item'><button
+          type='button'
+          class='btn btn-outline-info'
+        ><h3>users</h3></button>
+      </li>
+      {{#each users}}
+        <li class='list-group-item'><button
+            type='button'
+            class='list-group-item list-group-item-action'
+          >id - {{id}}</button>
+        </li>
+        <li class='list-group-item'><button
+            type='button'
+            class='list-group-item list-group-item-action'
+          ><h6>{{name}}</h6></button>
+        </li>
+        <li class='list-group-item'><button
+            type='button'
+            class='list-group-item list-group-item-action'
+          >{{gender}}</button>
+        </li>
+        <li class='list-group-item'><button
+            type='button'
+            class='list-group-item list-group-item-action'
+          >age - {{age}}</button>
+        </li>
+        <br />
+        <li class='list-group-item'><button
+            type='button'
+            class='btn btn-outline-secondary'
+          ><h4>friends</h4></button>
+        </li>
+        {{#each friends}}
+          <ul class='list-group'>
+            <li class='list-group-item'><button
+                type='button'
+                class='list-group-item list-group-item-action'
+              >id - {{id}}</button>
+            </li>
+            <li class='list-group-item'><button
+                type='button'
+                class='list-group-item list-group-item-action'
+              ><h6>{{name}}</h6></button>
+            </li>
+            <li class='list-group-item'><button
+                type='button'
+                class='list-group-item list-group-item-action'
+              >{{gender}}</button>
+            </li>
+            <li class='list-group-item'><button
+                type='button'
+                class='list-group-item list-group-item-action'
+              >age - {{age}}</button>
+            </li>
+            <br />
+            <li class='list-group-item'><button
+                type='button'
+                class='btn btn-outline-dark'
+              ><h5>mutual friends</h5></button>
+            </li>
+            {{#each mutual_friends}}
+              <ul class='list-group'>
+                <li class='list-group-item'><button
+                    type='button'
+                    class='list-group-item list-group-item-action'
+                  >id - {{id}}</button>
+                </li>
+                <li class='list-group-item'><button
+                    type='button'
+                    class='list-group-item list-group-item-action'
+                  ><h6>{{name}}</h6></button>
+                </li>
+                <li class='list-group-item'><button
+                    type='button'
+                    class='list-group-item list-group-item-action'
+                  >{{gender}}</button>
+                </li>
+                <li class='list-group-item'><button
+                    type='button'
+                    class='list-group-item list-group-item-action'
+                  >age - {{age}}</button>
+                </li>
+              </ul>
+            {{/each}}
+            {{#if groups includeZero=true}}
+              <li class='list-group-item'><button
+                  type='button'
+                  class='btn btn-outline-dark'
+                ><h5>groups</h5></button>
+              </li>
+            {{/if}}
+            {{#each groups}}
+              <ul class='list-group'>
+                <li class='list-group-item'><button
+                  type='button'
+                  class='list-group-item list-group-item-action'
+                >id - {{id}}</button>
+                </li>
+                <li class='list-group-item'><button
+                    type='button'
+                    class='list-group-item list-group-item-action'
+                  ><h6>{{name}}</h6></button>
+                </li>
+                <li class='list-group-item'><button
+                    type='button'
+                    class='list-group-item list-group-item-action'
+                  >{{description}}</button>
+                </li>
+                <li class='list-group-item'><button
+                    type='button'
+                    class='btn btn-outline-dark'
+                  ><h5>members</h5></button>
+                </li>
+                {{#each members}}
+                  <ul class='list-group'>
+                    <li class='list-group-item'><button
+                        type='button'
+                        class='list-group-item list-group-item-action'
+                      >id - {{id}}</button>
+                    </li>
+                    <li class='list-group-item'><button
+                        type='button'
+                        class='list-group-item list-group-item-action'
+                      ><h6>{{name}}</h6></button>
+                    </li>
+                    <li class='list-group-item'><button
+                        type='button'
+                        class='list-group-item list-group-item-action'
+                      >{{gender}}</button>
+                    </li>
+                    <li class='list-group-item'><button
+                        type='button'
+                        class='list-group-item list-group-item-action'
+                      >age - {{age}}</button>
+                    </li>
+                  </ul>
+                {{/each}}
+            {{/each}}     
+          </ul>
+        {{/each}}
+        {{#if groups includeZero=true}}
+          <li class='list-group-item'><button
+              type='button'
+              class='btn btn-outline-secondary'
+            ><h4>groups</h4></button>
+          </li>
+        {{/if}}
+        {{#each groups}}
+          <ul class='list-group'>
+            <li class='list-group-item'><button
+                type='button'
+                class='list-group-item list-group-item-action'
+              >id - {{id}}</button>
+            </li>
+            <li class='list-group-item'><button
+                type='button'
+                class='list-group-item list-group-item-action'
+              ><h6>{{name}}</h6></button>
+            </li>
+            <li class='list-group-item'><button
+                type='button'
+                class='list-group-item list-group-item-action'
+              >{{description}}</button>
+            </li>
+            <li class='list-group-item'><button
+                type='button'
+                class='btn btn-outline-dark'
+              ><h5>members</h5></button>
+            </li>
+            {{#each members}}
+              <ul class='list-group'>
+                <li class='list-group-item'><button
+                    type='button'
+                    class='list-group-item list-group-item-action'
+                  >id - {{id}}</button>
+                </li>
+                <li class='list-group-item'><button
+                    type='button'
+                    class='list-group-item list-group-item-action'
+                  ><h6>{{name}}</h6></button>
+                </li>
+                <li class='list-group-item'><button
+                    type='button'
+                    class='list-group-item list-group-item-action'
+                  >{{gender}}</button>
+                </li>
+                <li class='list-group-item'><button
+                    type='button'
+                    class='list-group-item list-group-item-action'
+                  >age - {{age}}</button>
+                </li>
+              </ul>
+            {{/each}}
+          </ul>
+        {{/each}}
+      {{/each}}
+    </ul>
+  </div>
+</main>
