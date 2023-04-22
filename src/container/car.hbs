@@ -1,0 +1,281 @@
+<div>
+  <header>
+    <h1>{{page.title}}</h1>
+  </header>
+</div>
+<main>
+  <section>
+    <div class='list-group'>
+      <button
+        type='button'
+        class='list-group-item list-group-item-action active'
+        aria-current='true'
+      >
+        <h5>{{make}}
+        {{model}}</h5>
+      </button>
+      <button
+        type='button'
+        class='list-group-item list-group-item-action'
+      >{{year}}</button>
+      <button
+        type='button'
+        class='list-group-item list-group-item-action'
+      >{{color}}</button>
+    </div>
+  </section>
+  <section>
+    <h2>Features</h2>
+    {{#with features}}
+      <ul>
+        <li>
+          <h3>Interior</h3>
+          {{#with interior}}
+            {{#with seats}}
+              <ul class='list-group'>
+                <li
+                  class='list-group-item active'
+                  aria-current='true'
+                ><h5>Seats:</h5></li>
+                <li
+                  class='list-group-item'
+                >{{material}}</li>
+                <li class='list-group-item'>{{color}}</li>
+                <li class='list-group-item'>
+                  {{#if heated}}
+                    heated
+                  {{/if}}
+                </li>
+                <li class='list-group-item'>
+                  {{#if ventilated}}
+                    ventilated
+                  {{/if}}
+                </li>
+              </ul>
+            {{/with}}
+            {{#with dashboard}}
+              <ul class='list-group'>
+                <li
+                  class='list-group-item active'
+                  aria-current='true'
+                ><h5>Dashboard:</h5></li>
+                <li
+                  class='list-group-item'
+                >{{material}}</li>
+                <li class='list-group-item'>{{color}}</li>
+                <li
+                  class='list-group-item active'
+                  aria-current='true'
+                ><h5>Display:</h5></li>
+                {{#with display}}
+                  <ul class='list-group'>
+                    <li class='list-group-item'>{{type}}</li>
+                    <li class='list-group-item'>size - {{size}}</li>
+                    <li class='list-group-item'>{{resolution}}</li>
+                    <li class='list-group-item'>
+                    {{#if touchscreen}}
+                      touchscreen
+                    {{/if}}
+                  </ul>  
+                {{/with}}                
+                </li>                
+              </ul>
+            {{/with}}
+            {{#with audio}}
+              <ul class='list-group'>
+                <li
+                  class='list-group-item active'
+                  aria-current='true'
+                ><h5>Audio:</h5></li>
+                <li
+                  class='list-group-item'
+                >{{system}}</li>
+                <li class='list-group-item'>speakers - {{speakers}}</li>
+                <li class='list-group-item'>
+                  {{#if subwoofer}}
+                    subwoofer
+                  {{/if}}
+                </li>
+                <li class='list-group-item'>
+                  {{#if bluetooth}}
+                    bluetooth
+                  {{/if}}
+                </li>
+                <li class='list-group-item'>
+                  {{#if USB}}
+                    USB
+                  {{/if}}
+                </li>
+              </ul>
+            {{/with}}
+          {{/with}}
+        </li>
+        <li>
+          <h3>Exterior</h3>
+          {{#with exterior}}
+            {{#with wheels}}
+              <ul class='list-group'>
+                <li
+                  class='list-group-item active'
+                  aria-current='true'
+                ><h5>Wheels:</h5></li>
+                <li
+                  class='list-group-item'
+                >size - {{size}}</li>
+                <li class='list-group-item'>{{type}}</li>
+                <li class='list-group-item'>{{color}}</li>
+              </ul>
+            {{/with}}
+            {{#with headlights}}
+              <ul class='list-group'>
+                <li
+                  class='list-group-item active'
+                  aria-current='true'
+                ><h5>Headlights:</h5></li>
+                <li
+                  class='list-group-item'
+                >{{type}}</li>
+                <li class='list-group-item'>brightness - {{brightness}}</li>
+                <li class='list-group-item'>
+                  {{#if automatic}}
+                    automatic
+                  {{/if}}
+                </li>
+              </ul>
+            {{/with}}
+            {{#with sunroof}}
+              <ul class='list-group'>
+                <li
+                  class='list-group-item active'
+                  aria-current='true'
+                ><h5>Sunroof:</h5></li>
+                <li
+                  class='list-group-item'
+                >{{type}}</li>
+                <li class='list-group-item'>size - {{size}}</li>
+                <li class='list-group-item'>
+                  {{#if automatic}}
+                    automatic
+                  {{/if}}
+                </li>
+              </ul>
+            {{/with}}
+          {{/with}}
+        </li>
+        <li>
+          <h3>Safety</h3>
+          {{#with safety}}
+            {{#with airbags}}
+              <ul class='list-group'>
+                <li
+                  class='list-group-item active'
+                  aria-current='true'
+                ><h5>Airbags:</h5></li>
+                <li
+                  class='list-group-item'
+                >front - {{front}}</li>
+                <li class='list-group-item'>side - {{side}}</li>
+                <li class='list-group-item'>knee - {{knee}}</li>
+                <li class='list-group-item'>rear - {{rear}}</li>
+              </ul>
+            {{/with}}
+            {{#with assistance}}
+              <ul class='list-group'>
+                <li
+                  class='list-group-item active'
+                  aria-current='true'
+                ><h5>Assistance:</h5></li>
+                <li class='list-group-item'>
+                  {{#if blind_spot_monitoring}}
+                    blind spot monitoring
+                  {{/if}}
+                </li>
+                <li class='list-group-item'>
+                  {{#if rear_cross_traffic_alert}}
+                    rear cross traffic alert
+                  {{/if}}
+                </li>
+                <li class='list-group-item'>
+                  {{#if lane_departure_warning}}
+                    lane departure warning
+                  {{/if}}
+                </li>
+                <li class='list-group-item'>
+                  {{#if adaptive_cruise_control}}
+                    adaptive cruise control
+                  {{/if}}
+                </li>
+                <li class='list-group-item'>
+                  {{#if collision_warning}}
+                    collision warning
+                  {{/if}}
+                </li>
+              </ul>
+            {{/with}}
+          {{/with}}
+        </li>
+      </ul>
+    {{/with}}
+  </section>
+  <section>
+    <h2>Engine</h2>
+    {{#with engine}}
+              <ul class='list-group'>
+                <li
+                  class='list-group-item'
+                >{{type}}</li>
+                <li class='list-group-item'>displacement - {{displacement}}</li>
+                <li class='list-group-item'>horsepower - {{horsepower}}</li>
+                <li class='list-group-item'>torque - {{torque}}</li>
+                <li
+                  class='list-group-item active'
+                  aria-current='true'
+                ><h5>Transmission:</h5></li>
+                {{#with transmission}}
+                  <ul class='list-group'>
+                    <li class='list-group-item'>{{type}}</li>
+                    <li class='list-group-item'>gears - {{gears}}</li>
+                  </ul>  
+                {{/with}}                
+                </li>                
+              </ul>
+            {{/with}}
+  </section>
+  <section>
+    <h2>Fuel economy</h2>
+    {{#with fuel_economy}}
+      <ul class='list-group'>
+        <li
+          class='list-group-item'
+        >city - {{city}}</li>
+        <li class='list-group-item'>highway - {{highway}}</li>
+        <li class='list-group-item'>combined - {{combined}}</li>        
+      </ul>
+    {{/with}}
+  </section>
+  <section>
+    <h2>Price</h2>
+    {{#with price}}
+              <ul class='list-group'>
+                <li
+                  class='list-group-item'
+                >base - {{base}}</li>
+                <li class='list-group-item'>destination - {{destination}}</li>
+                <li
+                  class='list-group-item active'
+                  aria-current='true'
+                ><h5>Options:</h5></li>
+                {{#with options}}
+                  <ul class='list-group'>
+                    <li class='list-group-item'>navigation - {{navigation}}</li>
+                    <li class='list-group-item'>moonroof - {{moonroof}}</li>
+                    <li class='list-group-item'>premium paint - {{premium_paint}}</li>
+                  </ul>  
+                {{/with}}                
+                </li>
+                <li class='list-group-item'><b>total - {{total}}</b></li>                
+              </ul>
+            {{/with}}
+  </section>
+
+</main>
