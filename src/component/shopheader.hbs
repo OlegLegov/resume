@@ -1,0 +1,14 @@
+<div class='card mb-5'>
+  {{#with navigation}}
+    <div class='nav my-2'>
+      {{#each links}}
+        <a
+          class='nav-link active'
+          aria-current='page'
+          href='{{href}}'
+        >{{text}}</a>
+      {{/each}}
+      <a class='nav-link disabled'>Disabled</a>
+    </div>
+  {{/with}}
+</div>

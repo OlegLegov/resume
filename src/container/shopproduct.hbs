@@ -1,0 +1,132 @@
+<main class="ms-4">
+    {{> shopheader}}
+    <nav aria-label="breadcrumb">
+        <ol class="breadcrumb">
+          {{#each breadcrumb}}
+              <li class="breadcrumb-item">
+                {{#if @last}}
+                <a>{{name}}</a>
+                {{else}}
+                <a href="{{url}}">{{name}}</a>
+                {{/if}}
+              </li>
+          {{/each}}
+        </ol>
+    </nav>
+    <div class='row'>
+      {{#with productData}}
+        <div class='col-6'>
+          <div class='card'>
+            <img src='{{img}}' class='card-img-top' />
+          </div>
+          <div class='card mt-4'>
+            <div class='card-body'>
+              {{#with info}}
+                <h5 class='card-title'>{{title}}</h5>
+                <p class='card-text'>{{about}}</p>
+                <h1 class="display-6"><b>{{price}}</b></h1>
+                {{#each category}}
+                    {{#if isHot}}
+                      <span
+                        class='badge text-bg-warning text-uppercase text-light rounded-pill'
+                      >{{name}}!</span>
+                    {{/if}}
+                    {{#if isNew}}
+                      <span
+                        class='badge text-bg-primary rounded-pill'
+                      >{{name}}</span>
+                    {{/if}}
+                    {{#if isBonus}}
+                      <span
+                        class='badge text-bg-info text-light rounded-pill'
+                      >{{name}}</span>
+                    {{/if}}
+                {{/each}}
+              {{/with}}
+            </div>  
+          </div>
+        </div>
+        <div class='col-5'>
+          <table class='table'>
+            {{#with item}}
+              <thead>
+                <tr>
+                  {{#each head}}
+                    <th>{{this}}</th>
+                  {{/each}}
+                </tr>
+              </thead>
+              <tbody>
+                {{#each body}}
+                  <tr>
+                    {{#each this}}
+                      <td>{{this}}</td>
+                    {{/each}}
+                  </tr>
+                {{/each}}
+              </tbody>
+            {{/with}}
+          </table>
+          <div class="card">
+            {{#with param}}
+              <div class="card-header">
+                {{title}}
+              </div>
+              <ul class="list-group list-group-flush">
+                {{#each list}}
+                  <li class="list-group-item">{{this}}</li>
+                {{/each}}
+              </ul>
+            {{/with}}
+          </div>
+          <div class="alert alert-danger mt-4" role="alert">
+            {{#with alert}}
+              {{#if isError}}
+                {{text}}
+              {{/if}}  
+            {{/with}}
+          </div>
+        </div>    
+        <div class="card ms-2 mt-5">
+          <form class="container-fluid">
+            {{#each actionList}}
+              {{#if isWarning}}
+                <button type="button" class="btn btn-warning mt-3 text-light">{{name}}</button>
+              {{/if}}
+              {{#if isError}}
+                <button type="button" class="btn btn-outline-danger mt-3 ms-3">{{name}}</button>
+              {{/if}}
+              {{#if isSuccess}}
+                <button type="button" class="btn btn-success mt-3 ms-3 text-light">{{name}}</button>
+              {{/if}}
+              {{#if isGood}}
+                <button type="button" class="btn btn-outline-success mt-3 ms-3">{{name}}</button>
+              {{/if}}
+            {{/each}}
+          </form>
+        </div>
+      {{/with}}
+    </div>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <hr>
+  <div class="row mb-5">
+    {{#with goodsOtherBlock}}
+      <div class="mt-5 mb-3"><h1 class="display-6 text-center"><b>{{title}}</b></h1></div>
+      {{#each cards}}
+          <div class='col-4'>
+            {{> shopcard}}
+          </div>
+      {{/each}}
+    {{/with}}
+  </div>
+  <hr>
+  <div class="my-5">
+    {{> shopaction}}
+  </div>
+  <hr>
+  {{> shopfooter}}
+</main>
