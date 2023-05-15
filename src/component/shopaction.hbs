@@ -1,16 +1,14 @@
-{{#with service}}
-  <div class='card text-bg-success text-center my-5 py-2'>
-    <div class='body'>
-      <h2 class='card-title'>{{title}}</h2>
-      <p class='card-text'>{{description}}</p>
-      {{#each buttons}}
-        <div class='flex-column'>
-          <a
-            href='{{link}}'
-            class='btn btn-primary mb-3'
-          >{{text}}</a>
-        </div>
-      {{/each}}
-    </div>
+<div class='card text-bg-dark my-5 py-2 ps-3'>
+  <div class='body'>
+    <h2 class='card-title'>{{header}}</h2>
+    <p class='card-text'>{{description}}</p>
+    {{#each buttons}}
+      <div class='flex-column'>
+        <a
+          href='{{link}}'
+          class='btn btn-primary mb-3'
+        >{{text}}</a>
+      </div>
+    {{/each}}
   </div>
-{{/with}}
+</div>
