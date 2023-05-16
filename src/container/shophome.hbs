@@ -1,18 +1,4 @@
 <main>
-  <div class='card mb-5'>
-    {{#with navigation}}
-      <div class='nav my-2'>
-        {{#each links}}
-          <a
-            class='nav-link active'
-            aria-current='page'
-            href='{{href}}'
-          >{{text}}</a>
-        {{/each}}
-        <a class='nav-link disabled'>Disabled</a>
-      </div>
-    {{/with}}
-  </div>
   <div class='mb-4'>
     {{#with newsBlock}}
       <div class='mb-4'><h2 class='text-center'>{{title}}
@@ -144,22 +130,4 @@
     {{/with}}
   </div>
   <hr />
-  <div class='footer'>
-    <div class='row'>
-      {{#each footer}}
-        <div class='col-2'>
-          <div>
-            {{#each this}}
-              <p>
-                <a
-                  class='nav-link {{#if @last}}disabled{{else}}text-primary{{/if}}'
-                  href='{{link}}'
-                >{{text}}</a>
-              </p>
-            {{/each}}
-          </div>
-        </div>
-      {{/each}}
-    </div>
-  </div>
 </main>
