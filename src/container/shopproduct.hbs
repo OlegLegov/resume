@@ -1,5 +1,4 @@
 <main class="ms-4">
-    {{> shopheader}}
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
           {{#each breadcrumb}}
@@ -125,8 +124,9 @@
   </div>
   <hr>
   <div class="my-5">
-    {{> shopaction}}
+    {{#with service}}
+      {{> shopaction}}
+    {{/with}}
   </div>
   <hr>
-  {{> shopfooter}}
 </main>

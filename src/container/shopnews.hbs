@@ -1,5 +1,5 @@
 <main>
-    {{> shopheader}}
+   
     {{> breadcrumb}}
     <div class='row'>
       {{#with newsData}}
@@ -40,8 +40,10 @@
     <br>
     <hr>
     <div>
-      {{> shopaction}}
+      {{#with service}}
+        {{> shopaction}}
+      {{/with}}
     </div>
     <hr>
-    {{> shopfooter}}
+    
 </main>
