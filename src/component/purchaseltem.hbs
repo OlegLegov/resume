@@ -1,0 +1,34 @@
+<div class='row'>
+  <div class='col-3'>
+    <div class='card-body'>
+      <div class='card-text mt-3 mb-2'>{{number}}</div>
+      <div class='card-text mb-2'><b>{{status}}</b></div>
+    </div>
+  </div>
+  <div class='col-2'>
+    <div class='card-body'>
+      {{#with amount}}
+        <div class='card-text mt-3 mb-2'>{{title}}</div>
+        <div class='card-text mb-2'><b>{{value}}</b></div>
+      {{/with}}
+    </div>
+  </div>
+  <div class='col-5'>
+    {{#each images}}
+      <img src='{{this}}' />
+    {{/each}}
+  </div>
+  <div class='col-2'>
+    {{#with button}}
+      {{#if isPrimary}}
+        <div class='card-body pt-4'>
+          <a
+            class='btn btn-primary'
+            href='{{link}}'
+            role='button'
+          >{{text}}</a>
+        </div>
+      {{/if}}
+    {{/with}}
+  </div>
+</div>
