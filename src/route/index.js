@@ -42,7 +42,110 @@ router.get('/', function (req, res) {
   // res.render генерує нам HTML сторінку
 
   //            ↙ cюди вводимо назву файлу з сontainer
-  res.render('index', {})
+  res.render('index', {
+    page: {
+      title: 'Index',
+    },
+    layout: 'index',
+    buttons: [
+      {
+        text: 'Summary',
+        link: 'http://localhost:3000/summary',
+      },
+      {
+        text: 'Skills',
+        link: 'http://localhost:3000/skills',
+      },
+      {
+        text: 'Education',
+        link: 'http://localhost:3000/education',
+      },
+      {
+        text: 'Work',
+        link: 'http://localhost:3000/work',
+      },
+      {
+        text: 'Biography',
+        link: 'http://localhost:3000/bio',
+      },
+      {
+        text: 'Person',
+        link: 'http://localhost:3000/person',
+      },
+      {
+        text: 'Facebook',
+        link: 'http://localhost:3000/facebook',
+      },
+      {
+        text: 'Mac',
+        link: 'http://localhost:3000/mac',
+      },
+      {
+        text: 'Program',
+        link: 'http://localhost:3000/program',
+      },
+      {
+        text: 'Web',
+        link: 'http://localhost:3000/web',
+      },
+      {
+        text: 'Car',
+        link: 'http://localhost:3000/car',
+      },
+      {
+        text: 'Js',
+        link: 'http://localhost:3000/js',
+      },
+      {
+        text: 'Task21',
+        link: 'http://localhost:3000/task21',
+      },
+      {
+        text: 'Task22',
+        link: 'http://localhost:3000/task22',
+      },
+      {
+        text: 'Task31',
+        link: 'http://localhost:3000/task31',
+      },
+      {
+        text: 'Shophome',
+        link: 'http://localhost:3000/shophome',
+      },
+      {
+        text: 'Shopproduct',
+        link: 'http://localhost:3000/shopproduct',
+      },
+      {
+        text: 'Shopnews',
+        link: 'http://localhost:3000/shopnews',
+      },
+      {
+        text: 'Shoporder',
+        link: 'http://localhost:3000/shoporder',
+      },
+      {
+        text: 'Shopcart',
+        link: 'http://localhost:3000/shopcart',
+      },
+      {
+        text: 'Shopprofile',
+        link: 'http://localhost:3000/shopprofile',
+      },
+      {
+        text: 'Shopreview',
+        link: 'http://localhost:3000/shopreview',
+      },
+      {
+        text: 'Shopreview',
+        link: 'http://localhost:3000/shopreview',
+      },
+      {
+        text: 'Shopcatalog',
+        link: 'http://localhost:3000/shopcatalog',
+      },
+    ],
+  })
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -950,93 +1053,87 @@ router.get('/web', function (req, res) {
   })
 })
 
-router.get('/car', function (req, res) {
+// ================================================================
+
+router.get('/js', function (req, res) {
   // res.render генерує нам HTML сторінку
 
-  // ================================================================
-
-  router.get('/js', function (req, res) {
-    // res.render генерує нам HTML сторінку
-
-    //            ↙ cюди вводимо назву файлу з сontainer
-    res.render('js', {
-      layout: 'basic',
-      page: {
-        title: 'JavaScript',
+  //            ↙ cюди вводимо назву файлу з сontainer
+  res.render('js', {
+    layout: 'basic',
+    page: {
+      title: 'JavaScript',
+    },
+    name: 'JavaScript',
+    description:
+      'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
+    history: {
+      year: 1995,
+      founder: 'Brendan Eich',
+    },
+    types: [
+      'Number',
+      'String',
+      'Boolean',
+      'Null',
+      'Undefined',
+      'Symbol',
+      'Object',
+    ],
+    syntax: {
+      variables: ['var', 'let', 'const'],
+      functions: ['function'],
+      conditionals: ['if', 'else', 'switch'],
+      loops: ['for', 'while', 'do-while'],
+      classes: ['class'],
+    },
+    features: [
+      'First-class functions',
+      'Closures',
+      'Dynamic typing',
+      'Prototype-based inheritance',
+      'Asynchronous programming with Promises and async/await',
+      'Modules with import/export statements',
+    ],
+    libraries: [
+      'jQuery',
+      'React',
+      'Angular',
+      'Vue',
+      'Node.js',
+      'Express.js',
+      'Lodash',
+      'Moment.js',
+    ],
+    tools: [
+      'Babel',
+      'Webpack',
+      'ESLint',
+      'Jest',
+      'Mocha',
+      'Chai',
+      'Selenium',
+      'Cypress',
+    ],
+    community: [
+      {
+        name: 'Stack Overflow',
+        type: 'forum',
       },
-      name: 'JavaScript',
-      description:
-        'JavaScript is a popular high-level, dynamic, and interpreted programming language.',
-      history: {
-        year: 1995,
-        founder: 'Brendan Eich',
+      {
+        name: 'JavaScript Weekly',
+        type: 'newsletter',
       },
-      types: [
-        'Number',
-        'String',
-        'Boolean',
-        'Null',
-        'Undefined',
-        'Symbol',
-        'Object',
-      ],
-      syntax: {
-        variables: ['var', 'let', 'const'],
-        functions: ['function'],
-        conditionals: ['if', 'else', 'switch'],
-        loops: ['for', 'while', 'do-while'],
-        classes: ['class'],
+      {
+        name: 'The Changelog',
+        type: 'podcast',
       },
-      features: [
-        'First-class functions',
-        'Closures',
-        'Dynamic typing',
-        'Prototype-based inheritance',
-        'Asynchronous programming with Promises and async/await',
-        'Modules with import/export statements',
-      ],
-      libraries: [
-        'jQuery',
-        'React',
-        'Angular',
-        'Vue',
-        'Node.js',
-        'Express.js',
-        'Lodash',
-        'Moment.js',
-      ],
-      tools: [
-        'Babel',
-        'Webpack',
-        'ESLint',
-        'Jest',
-        'Mocha',
-        'Chai',
-        'Selenium',
-        'Cypress',
-      ],
-      community: [
-        {
-          name: 'Stack Overflow',
-          type: 'forum',
-        },
-        {
-          name: 'JavaScript Weekly',
-          type: 'newsletter',
-        },
-        {
-          name: 'The Changelog',
-          type: 'podcast',
-        },
-        {
-          name: 'CSS-Tricks',
-          type: 'blog',
-        },
-      ],
-    })
-    //                  ↑↑ сюди вводимо JSON дані
+      {
+        name: 'CSS-Tricks',
+        type: 'blog',
+      },
+    ],
   })
-
   //                  ↑↑ сюди вводимо JSON дані
 })
 
@@ -3875,6 +3972,7 @@ router.get('/bootstrap', function (req, res) {
   })
   //                  ↑↑ сюди вводимо JSON дані
 })
+
 // ================================================================
 // Підключаємо роутер до бек-енду
 module.exports = router
